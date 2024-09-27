@@ -46,7 +46,12 @@
     
           const signInDiv = document.getElementById('sign-in')
     
-          Clerk.mountSignIn(signInDiv, {forceRedirectUrl:'./signed-in'})   
+          Clerk.mountSignIn(signInDiv, {
+            routing: 'path',
+            path: '/',
+            forceRedirectUrl: './signed-in',
+            fallbackRedirectUrl: './signed-in',
+          })   
         }
       })
     </script>
